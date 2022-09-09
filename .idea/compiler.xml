@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="banner_api" />
+        <module name="livegoods_banner" />
+        <module name="livegoods_commons_pojo" />
+        <module name="livegoods_gateway" />
+        <module name="livegoods_mongo" />
+        <module name="banner_pojo" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="banner_api" options="-parameters" />
+      <module name="banner_pojo" options="-parameters" />
+      <module name="livegoods_banner" options="-parameters" />
+      <module name="livegoods_commons_pojo" options="-parameters" />
+      <module name="livegoods_gateway" options="-parameters" />
+      <module name="livegoods_mongo" options="-parameters" />
+    </option>
+  </component>
+</project>

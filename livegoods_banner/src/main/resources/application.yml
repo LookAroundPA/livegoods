@@ -1,0 +1,37 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: livegoods-banner
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.43.430:8848
+      config:
+        server-addr: 192.168.43.130:8848
+        prefix: livegoods_commons #这里填写在nacos中配置的名称
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/livegoods?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  data:
+    mongodb:
+      host: 192.168.43.130
+      port: 27017
+      username: bjsxt
+      password: '123'
+      database: livegoods
+      authentication-database: admin
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+
+dubbo:
+  application:
+    name: livegoods-banner
+  registry:
+    address: nacos://192.168.43.130:8848
+  protocol:
+    name: dubbo
+    port: -1

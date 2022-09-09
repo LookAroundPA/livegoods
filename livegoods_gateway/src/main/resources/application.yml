@@ -1,0 +1,19 @@
+server:
+  port: 4006
+spring:
+  application:
+    name: livegoods-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.43.130:8848
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+          enabled: false
+      routes:
+        - id: banner
+          uri: lb://livegoods-banner
+          predicates:
+            - Path=/banner
